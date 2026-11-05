@@ -1101,47 +1101,28 @@
 function filterPubs(cat, btn) {
   document.querySelectorAll('.pub-filter').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  const groups = {
-    gbv:       document.getElementById('group-gbv'),
-    srh:       document.getElementById('group-srh'),
-    immigrant: document.getElementById('group-immigrant'),
-    review:    document.getElementById('group-review'),
-    working:   document.getElementById('group-working'),
-  };
-  if (cat === 'all') {
-    groups.gbv.style.display = '';
-    groups.srh.style.display = '';
-    groups.immigrant.style.display = '';
-    groups.review.style.display = 'none';
-    groups.working.style.display = 'none';
-  } else if (cat === 'review') {
-    Object.values(groups).forEach(g => g.style.display = 'none');
-    groups.review.style.display = '';
-  } else if (cat === 'working') {
-    Object.values(groups).forEach(g => g.style.display = 'none');
-    groups.working.style.display = '';
-  } else {
-    Object.values(groups).forEach(g => g.style.display = 'none');
-    if (groups[cat]) groups[cat].style.display = '';
-  }
+
+  document.querySelectorAll('.pub-group').forEach(group => {
+    if (cat === 'all') {
+      group.style.display = '';
+    } else {
+      group.style.display = (group.id === 'group-' + cat) ? '' : 'none';
+    }
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.flip-card').forEach(card => {
     const inner = card.querySelector('.flip-inner');
     const front = card.querySelector('.flip-front');
-
-    // Let the front render naturally, then lock that height for both sides
     const h = front.offsetHeight;
     inner.style.height = h + 'px';
     card.style.height  = h + 'px';
-
     card.addEventListener('click', () => {
       card.classList.toggle('flipped');
     });
   });
 
-  // Prevent clicks inside pub list from flipping back
   document.querySelectorAll('.flip-pub-list').forEach(list => {
     list.addEventListener('click', e => e.stopPropagation());
     list.addEventListener('wheel', e => e.stopPropagation(), { passive: true });
