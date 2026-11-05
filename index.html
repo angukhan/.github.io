@@ -234,7 +234,7 @@
     border-top: 1px solid var(--border);
   }
 
-  /* RESEARCH */
+  /* RESEARCH & PUBLICATIONS */
   #research { background: var(--bg); }
   .research-intro {
     max-width: 860px; font-size: 0.93rem; color: var(--muted);
@@ -326,65 +326,6 @@
   .project-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.65; }
   .project-meta { font-size: 0.76rem; color: var(--muted); text-align: right; white-space: nowrap; }
   .project-meta strong { color: var(--rose); display: block; font-size: 0.9rem; }
-
-  /* PUBLICATIONS */
-  #publications { background: var(--bg); }
-  .pub-filter-row { display: flex; gap: 0.4rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
-  .pub-filter {
-    font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
-    padding: 0.32rem 0.85rem; border: 1px solid var(--border);
-    background: transparent; color: var(--muted); cursor: pointer;
-    font-family: 'Jost', sans-serif; transition: all 0.2s;
-  }
-  .pub-filter.active, .pub-filter:hover { background: var(--rose); color: #fff; border-color: var(--rose); }
-  .pub-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); }
-  .pub-item {
-    background: var(--bg); padding: 1.4rem 1.8rem;
-    display: grid; grid-template-columns: 1.8rem 1fr;
-    gap: 1.3rem; align-items: start; transition: background 0.2s;
-  }
-  .pub-item:hover { background: var(--bg-alt); }
-  .pub-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1rem; color: var(--rose-light); font-weight: 400; margin-top: 0.15rem;
-  }
-  .pub-citation { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
-  .pub-citation strong { color: var(--ink); }
-  .pub-journal {
-    font-size: 0.74rem; color: var(--rose); font-style: italic;
-    margin-top: 0.3rem; display: block;
-  }
-  .pub-link {
-    display: inline-flex; align-items: center; gap: 0.25rem;
-    font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--steel); font-weight: 500; text-decoration: none;
-    border: 1px solid var(--border); padding: 0.12rem 0.5rem;
-    margin-left: 0.5rem; vertical-align: middle;
-    transition: background 0.2s, color 0.2s;
-  }
-  .pub-link:hover { background: var(--steel); color: #fff; border-color: var(--steel); }
-  .flip-link {
-    display: inline-block;
-    font-size: 0.6rem; letter-spacing: 0.09em; text-transform: uppercase;
-    color: var(--steel); text-decoration: none; border-bottom: 1px solid transparent;
-    margin-left: 0.4rem; vertical-align: middle;
-    transition: border-color 0.2s;
-  }
-  .flip-link:hover { border-bottom-color: var(--steel); }
-  .pub-badge {
-    display: inline-block; font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase;
-    padding: 0.12rem 0.5rem; background: rgba(155,138,154,0.1); color: var(--mauve);
-    border: 1px solid rgba(155,138,154,0.3); margin-left: 0.4rem; vertical-align: middle;
-  }
-  .pub-group { margin-bottom: 2.5rem; }
-  .pub-group-header {
-    display: flex; align-items: center; gap: 0.7rem;
-    font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--muted); font-weight: 500;
-    padding: 0.6rem 0; margin-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .pub-group-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
   /* ABOUT */
   #about { background: var(--bg-alt); }
